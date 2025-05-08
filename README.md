@@ -33,7 +33,7 @@ const point: Point = { x: 10, y: 20 };
 
 ### Key Difference: Use interface for object-oriented designs (e.g., classes) and when you need merging. Use type for flexibility with unions, intersections, or primitives.
 
-#### The keyof Keyword in TypeScript
+
 #### The keyof operator returns a union of all known keys of a type, enabling dynamic access to object properties while maintaining type safety.
 
 ```Example:
@@ -54,8 +54,11 @@ console.log(getProperty(person, "name")); // Output: Bob
 ```
 
 ### Use Case: keyof is invaluable for creating type-safe utilities, like functions that access object properties dynamically.
-### any, unknown, and never Types
-### TypeScript’s type system includes special types to handle various scenarios:
+
+#### any, unknown, and never Types
+
+#### TypeScript’s type system includes special types to handle various scenarios:
+
 
 - #### any: Disables type checking, allowing any value or operation. It’s a fallback but undermines TypeScript’s benefits.
 - #### unknown: A safer alternative to any. You must narrow the type (e.g., via type guards) before performing operations.
@@ -101,8 +104,8 @@ enum Color {
 const favoriteColor: Color = Color.Blue; // "BLUE"
 ```
 
-#### Use Case: Enums are ideal for defining fixed sets of values, like statuses, roles, or categories, improving code clarity.
-#### Type Inference in TypeScript
+### Use Case: Enums are ideal for defining fixed sets of values, like statuses, roles, or categories, improving code clarity.
+
 #### Type inference is TypeScript’s ability to automatically deduce types based on context, reducing the need for explicit annotations.
 
 ```Example:
@@ -132,7 +135,8 @@ TypeScript enhances projects by:
 #### Real-World Impact: Teams using TypeScript report fewer bugs and faster onboarding for new developers.
 Union and Intersection Types
 
-#### Union Types (|): Allow a value to be one of multiple types.
+
+### Union Types (|): Allow a value to be one of multiple types.
 Intersection Types (&): Combine multiple types into one, requiring all properties.
 
 ```Example:
@@ -158,7 +162,7 @@ type Person = HasName & HasAge;
 const person: Person = { name: "Charlie", age: 40 }; // Must have both
 ```
 
-### Use Case: Unions are great for flexible inputs (e.g., IDs as strings or numbers), while intersections ensure objects meet multiple criteria (e.g., combining interfaces).
+#### Use Case: Unions are great for flexible inputs (e.g., IDs as strings or numbers), while intersections ensure objects meet multiple criteria (e.g., combining interfaces).
 
 ### Conclusion*
 TypeScript’s powerful features—interfaces, types, keyof, special types, enums, type inference, and union/intersection types—enable developers to write safer, more maintainable code. By understanding and applying these concepts, you can unlock TypeScript’s full potential, leading to fewer bugs, better collaboration, and scalable projects. Start integrating these practices into your workflow to experience the benefits firsthand!
